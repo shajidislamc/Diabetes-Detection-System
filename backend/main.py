@@ -1,5 +1,5 @@
 from fastapi import FastAPI, HTTPException
-from app.schemas import DiabetesInput, DiabetesPredictionResponse, DiabetesMetricResponse
+from backend.schemas import DiabetesInput, DiabetesPredictionResponse, DiabetesMetricResponse
 import joblib
 import numpy as np
 import pandas as pd
