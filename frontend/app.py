@@ -37,7 +37,7 @@ if submit:
     }
 
     try:
-        # 🔹 Wake up Render backend (cold start)
+        # Wake up Render backend (cold start)
         requests.get(HEALTH_URL, timeout=60)
 
         with st.spinner("Predicting..."):
