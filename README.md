@@ -70,7 +70,7 @@ python model/train_model.py
 ```bash
 uvicorn backend.main:app --reload
 ```
-The API will be available at: http://127.0.0.1:8000
+The API will be available locally at: http://127.0.0.1:8000
 
 ### 6. Start the frontend (in a new terminal)
 
