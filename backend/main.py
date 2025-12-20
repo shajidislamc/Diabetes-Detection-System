@@ -92,13 +92,10 @@ def get_metrics():
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
-    # Support both new metrics format (accuracy/precision/recall/f1_score)
-    # and older training output which contained best_accuracy/accuracies.
     required_keys = {"accuracy", "precision", "recall", "f1_score"}
     if required_keys.issubset(metrics.keys()):
         return DiabetesMetricResponse(**{k: float(metrics[k]) for k in required_keys})
 
-    # If JSON contains legacy fields, map best_accuracy -> accuracy and fill others with 0.0
     if "best_accuracy" in metrics:
         return DiabetesMetricResponse(
             accuracy=float(metrics.get("best_accuracy", 0.0)),
