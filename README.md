@@ -149,6 +149,7 @@ The Streamlit app will open in your browser.
 ---
 <img width="543" height="820" alt="Screenshot From 2026-07-29 01-06-10" src="https://github.com/user-attachments/assets/80b3a5ae-d8eb-495f-aaac-ab9c177ec04c" />
 ---
+
 ## Notes
 
 - Retrain the model with `python model/train_model.py` if you update the dataset.
